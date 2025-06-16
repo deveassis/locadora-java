@@ -17,7 +17,7 @@ private void validateCaracter(String valor, int numeroMinimo) {
 }
 
 
-    // Setter
+    // Construtor
   public Client(String name, String cpf, String cnh, String telephone, String email){
     validateCaracter(cpf, 11);
     validateCaracter(cnh, 11);
@@ -33,7 +33,6 @@ private void validateCaracter(String valor, int numeroMinimo) {
   }
 
 
-    //Getter
     public ArrayList<Object> getClient(){
         ArrayList<Object> returnClient = new ArrayList<>();
         returnClient.add(name);
@@ -42,5 +41,45 @@ private void validateCaracter(String valor, int numeroMinimo) {
         returnClient.add(cnh);
         returnClient.add(email);
         return returnClient;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getCnh() {
+        return cnh;
+    }
+
+    public void setCnh(String cnh) {
+        this.cnh = cnh;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
