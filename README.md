@@ -1,31 +1,35 @@
-🚗 Locadora de Veículos (Projeto de Estudo em Java)
-Este é um projeto de estudo desenvolvido com o objetivo de praticar os conceitos fundamentais de Java, incluindo Programação Orientada a Objetos (POO), estrutura de dados, entrada e saída de dados, e persistência de dados (futuramente com banco de dados ou arquivos).
+🚗 Locadora de Veículos – Projeto Java Puro
+Bem-vindo à minha locadora fictícia! Este projeto é um exercício prático para colocar em ação tudo que venho aprendendo em Java: POO, estrutura de dados, menus interativos e (em breve) persistência com banco de dados. Tudo no braço, sem frameworks externos! 💪
 
-📚 Objetivos do Projeto
-Praticar os pilares da POO com Java;
+🎯 Objetivos
+Praticar os pilares da Programação Orientada a Objetos
 
-Simular um sistema de locação de veículos;
+Simular um sistema real de locação de veículos
 
-Criar um sistema em Java puro, sem frameworks externos;
+Escrever Java “na unha”, sem Spring ou mágica
 
-Utilizar estruturas como listas, menus interativos, e lógica condicional.
+Trabalhar com listas, condições, e entrada de dados via terminal
 
 🧩 Funcionalidades (em desenvolvimento)
-Cadastro de veículos (modelo, placa, tipo, status);
+Cadastro de veículos 🚙 (modelo, placa, tipo, status)
 
-Cadastro de clientes (nome, CPF, telefone);
+Cadastro de clientes 👤 (nome, CPF, telefone, CNH)
 
-Locação de veículos (alugar e devolver);
+Locação e devolução de veículos 🔄
 
-Listagem de veículos disponíveis e alugados;
+Listagem de veículos disponíveis e alugados 📋
 
-Relatórios simples de locações;
+Relatórios simples de locações 📊
 
-(Em breve) Persistência de dados com arquivos ou banco de dados via JDBC.
+(Em breve) Salvando os dados com arquivos ou banco via JDBC 💾
 
-🛠️ Tecnologias Utilizadas
-Java SE 17+ (pode ser adaptado para outras versões);
+🛠️ Tecnologias
+Java SE 17+
 
-IDE utilizada: IntelliJ IDEA / Eclipse / VSCode;
+IDEs: IntelliJ IDEA / Eclipse / VSCode
 
-(Opcional futuramente) JDBC com MySQL.
+(Futuramente) JDBC + MySQL para persistência
+
+✍️ Ainda em progresso, mas já rodando firme!
+Fique à vontade para clonar, testar e acompanhar a evolução.
+Pull requests e sugestões são sempre bem-vindas 🚀
