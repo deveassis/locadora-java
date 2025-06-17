@@ -1,8 +1,8 @@
 package Model.Persons;
 
 import Model.Address;
-
-public class Person {
+// Uma classe abastrata quer dizer que nao posso criar algo diretamente dela, apenas atraves das subclasses como pessoa fisica ou juridica
+public abstract class Person {
     private String nameOrSocialReason;
     private String document;
     private String telephone;

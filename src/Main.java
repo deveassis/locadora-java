@@ -14,7 +14,7 @@ public class Main {
 
 
 
-
+        // Mostra o menu para o cliente
         AppController.mostrarMenu();
         System.out.print("> ");
         int numOpcao = scanner.nextInt();
