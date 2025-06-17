@@ -1,5 +1,9 @@
 package Controller;
+import Model.Address;
 import Model.Client;
+import Model.Persons.NaturalPerson;
+import Model.Persons.Person;
+
 import java.util.Scanner;
 public class AppController {
     public static void mostrarMenu() {
@@ -22,7 +26,7 @@ public class AppController {
         try {
             System.out.println("Digite seu nome:");
             String nome = scanner.nextLine();
-            System.out.println("Digite seu CPF:");
+            System.out.println("Digite seu CPF ou CNPJ:");
             String cpf = scanner.nextLine();
             System.out.println("Digite sua CNH:");
             String cnh = scanner.nextLine();
@@ -30,10 +34,17 @@ public class AppController {
             String telefone = scanner.nextLine();
             System.out.println("Digite seu email:");
             String email = scanner.nextLine();
+            System.out.println("Digite o tipo PF ou PJ:");
+            String tipo = scanner.nextLine();
 
-            Client cliente = new Client(nome, cpf, cnh, telefone, email);
-            System.out.println("Cadastro realizado para: " + cliente.getName());
+            Address endereco = new Address("Rua um", 12, "A", "Sao Mateus", "Sao Paulo", "SP", "03000-001");
+            Person pessoa = new NaturalPerson("Gabriel", "45652577851", "11970653827", "deveassis@gmail.com", endereco);
+            Client cliente = new Client(pessoa, "32132344312", tipo);
+
+            System.out.println("Cadastro realizado para: " + cliente.getPerson().getNameOrSocialReason());
+
             return cliente;
+
         } catch (Exception e) {
             System.out.println("Erro ao cadastrar: " + e.getMessage());
             return null;

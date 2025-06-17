@@ -1,4 +1,7 @@
-package Model;
+package Model.Shop;
+import Model.Car;
+import Model.Client;
+
 import java.time.LocalDate;
 public class Location {
     Client client;
@@ -64,13 +67,13 @@ public class Location {
     }
 
     // metodo de interacao
-    public String clienteAntigo(String name) {
+  /*  public String clienteAntigo(String name) {
         if (name.equals(getClient().getName())) {
             this.getClient().setName("Gabriel Assis");  // Isso muda o nome do cliente
             return "Cliente antigo identificado e nome atualizado.";
         } else {
             return "Cliente não identificado como antigo.";
         }
-    }
+    }*/
 
 }

@@ -96,6 +96,13 @@ public class Car {
     }
 
 
+    //Métodos
+    void manutencaoPreventiva(){}
+
+    void manutencaoReativa(){}
+
+    void venderVeiculo(){}
+
 
 
 }

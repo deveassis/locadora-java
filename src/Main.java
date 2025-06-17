@@ -1,12 +1,9 @@
 import Controller.AppController;
 import Model.Client;
 import Model.Car;
-import java.time.LocalDate;
+
 import java.util.Scanner;
-import java.util.ArrayList;
 
-
-import Model.Location;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
