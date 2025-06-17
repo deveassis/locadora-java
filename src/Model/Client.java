@@ -3,37 +3,35 @@ package Model;
 import java.util.ArrayList;
 
 public class Client {
-    String name;
-    String cpf;
-    String telephone;
-    String cnh;
-    String email;
+    private String name;
+    private String cpf;
+    private String telephone;
+    private String cnh;
+    private String email;
 
-
-private void validateCaracter(String valor, int numeroMinimo) {
-    if (valor.length() < numeroMinimo) {
-        throw new IllegalArgumentException("Este dado "+ valor +"  deve conter pelo menos caracteres.");
+    // Valida caracter
+    private void validateCaracter(String valor, int numeroMinimo) {
+        if (valor.length() < numeroMinimo) {
+            throw new IllegalArgumentException("Este dado " + valor + " deve conter pelo menos " + numeroMinimo + " caracteres.");
+        }
     }
-}
-
 
     // Construtor
-  public Client(String name, String cpf, String cnh, String telephone, String email){
-    validateCaracter(cpf, 11);
-    validateCaracter(cnh, 11);
-    validateCaracter(telephone, 11);
-    validateCaracter(email, 9);
-    validateCaracter(name, 3);
+    public Client(String name, String cpf, String cnh, String telephone, String email) {
+        validateCaracter(cpf, 11);
+        validateCaracter(cnh, 11);
+        validateCaracter(telephone, 11);
+        validateCaracter(email, 9);
+        validateCaracter(name, 3);
 
-      this.name = name;
-      this.cpf = cpf;
-      this.cnh = cnh;
-      this.telephone = telephone;
-      this.email = email;
-  }
+        this.name = name;
+        this.cpf = cpf;
+        this.cnh = cnh;
+        this.telephone = telephone;
+        this.email = email;
+    }
 
-
-    public ArrayList<Object> getClient(){
+    public ArrayList<Object> getClient() {
         ArrayList<Object> returnClient = new ArrayList<>();
         returnClient.add(name);
         returnClient.add(cpf);
@@ -44,7 +42,7 @@ private void validateCaracter(String valor, int numeroMinimo) {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {

@@ -63,10 +63,10 @@ public class Location {
         this.dateReturn = dateReturn;
     }
 
-
+    // metodo de interacao
     public String clienteAntigo(String name) {
-        if (name.equals("Gabriel")) {
-            this.getClient().setName("Gabriel Assis");  // Isso muda o nome do cliente para "206"
+        if (name.equals(getClient().getName())) {
+            this.getClient().setName("Gabriel Assis");  // Isso muda o nome do cliente
             return "Cliente antigo identificado e nome atualizado.";
         } else {
             return "Cliente não identificado como antigo.";
