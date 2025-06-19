@@ -3,9 +3,16 @@ import Model.Address;
 import Model.Client;
 import Model.Persons.NaturalPerson;
 import Model.Persons.Person;
+import Model.Shop.Location;
+import Model.Vehicles.Car;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 public class AppController {
+    private static List<Client> clients = new ArrayList<>();
+    private static List<Car> cars = new ArrayList<>();
+    private static List<Location> locations = new ArrayList<>();
     public static void mostrarMenu() {
         System.out.println("--------------------------------");
         System.out.println("Seja bem-vindo à Locadora Assis");
@@ -35,11 +42,12 @@ public class AppController {
             System.out.println("Digite seu email:");
             String email = scanner.nextLine();
             System.out.println("Digite o tipo PF ou PJ:");
-            String tipo = scanner.nextLine();
+            String tipo = scanner.nextLine().toUpperCase();
+            Client.PersonType tipoPessoa = Client.PersonType.valueOf(tipo);
 
             Address endereco = new Address("Rua um", 12, "A", "Sao Mateus", "Sao Paulo", "SP", "03000-001");
             Person pessoa = new NaturalPerson("Gabriel", "45652577851", "11970653827", "deveassis@gmail.com", endereco);
-            Client cliente = new Client(pessoa, "32132344312", tipo);
+            Client cliente = new Client(pessoa, "32132344312", tipoPessoa);
 
             System.out.println("Cadastro realizado para: " + cliente.getPerson().getNameOrSocialReason());
 
@@ -62,5 +70,27 @@ public class AppController {
     public static void devolverVeiculo(){}
 
 
+    public static List<Car> getCars() {
+        return cars;
+    }
 
+    public static void setCars(List<Car> cars) {
+        AppController.cars = cars;
+    }
+
+    public static List<Client> getClients() {
+        return clients;
+    }
+
+    public static void setClients(List<Client> clients) {
+        AppController.clients = clients;
+    }
+
+    public static List<Location> getLocations() {
+        return locations;
+    }
+
+    public static void setLocations(List<Location> locations) {
+        AppController.locations = locations;
+    }
 }

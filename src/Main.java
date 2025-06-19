@@ -1,6 +1,6 @@
 import Controller.AppController;
 import Model.Client;
-import Model.Car;
+import Model.Vehicles.Car;
 
 import java.util.Scanner;
 

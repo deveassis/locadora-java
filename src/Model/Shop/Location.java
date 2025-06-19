@@ -1,24 +1,24 @@
 package Model.Shop;
-import Model.Car;
+import Model.Vehicles.Car;
 import Model.Client;
 
 import java.time.LocalDate;
 public class Location {
     Client client;
     Car car;
-    LocalDate dateWithDrawal;
-    LocalDate datePrevReturn;
-    LocalDate dateReturn;
+    LocalDate rentalStartDate;
+    LocalDate expectedReturnDate;
+    LocalDate actualReturnDate;
 
 
     //Construtor
     public Location(Client client, Car car, LocalDate dataWithDrewal,
-                    LocalDate datePrevReturn, LocalDate dateReturn){
+                    LocalDate expectedReturnDate, LocalDate actualReturnDate){
         this.client = client;
         this.car = car;
-        this.dateWithDrawal = dataWithDrewal;
-        this.datePrevReturn = datePrevReturn;
-        this.dateReturn = dateReturn;
+        this.rentalStartDate = dataWithDrewal;
+        this.expectedReturnDate = expectedReturnDate;
+        this.actualReturnDate = actualReturnDate;
     };
 
 
@@ -32,16 +32,16 @@ public class Location {
         return car;
     }
 
-    public LocalDate getDateWithDrawal() {
-        return dateWithDrawal;
+    public LocalDate getrentalStartDate() {
+        return rentalStartDate;
     }
 
-    public LocalDate getDatePrevReturn() {
-        return datePrevReturn;
+    public LocalDate getexpectedReturnDate() {
+        return expectedReturnDate;
     }
 
-    public LocalDate getDateReturn() {
-        return dateReturn;
+    public LocalDate getactualReturnDate() {
+        return actualReturnDate;
     }
 
 
@@ -54,16 +54,16 @@ public class Location {
         this.car = car;
     }
 
-    public void setDateWithDrawal(LocalDate dateWithDrawal) {
-        this.dateWithDrawal = dateWithDrawal;
+    public void setrentalStartDate(LocalDate rentalStartDate) {
+        this.rentalStartDate = rentalStartDate;
     }
 
-    public void setDatePrevReturn(LocalDate datePrevReturn) {
-        this.datePrevReturn = datePrevReturn;
+    public void setexpectedReturnDate(LocalDate expectedReturnDate) {
+        this.expectedReturnDate = expectedReturnDate;
     }
 
-    public void setDateReturn(LocalDate dateReturn) {
-        this.dateReturn = dateReturn;
+    public void setactualReturnDate(LocalDate actualReturnDate) {
+        this.actualReturnDate = actualReturnDate;
     }
 
     // metodo de interacao

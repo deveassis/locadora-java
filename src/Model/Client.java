@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Client {
     private Person person;
     private String cnh;
-    private String typePerson;
+    private final PersonType personType;
 
     private void validateCaracter(String valor, int numeroMinimo) {
         if (valor.length() < numeroMinimo) {
@@ -15,16 +15,13 @@ public class Client {
         }
     }
 
-    public Client(){
-        this.person = new Person();
-    }
 
 
-    public Client(Person person, String cnh, String typePerson) {
+    public Client(Person person, String cnh, PersonType personType) {
         validateCaracter(cnh, 11);
         this.person = person;
         this.cnh = cnh;
-        this.typePerson = typePerson;
+        this.personType = personType;
     }
 
 
@@ -37,10 +34,9 @@ public class Client {
         return cnh;
     }
 
-    public String getTypePerson() {
-        return typePerson;
+    public PersonType getPersonType() {
+        return personType;
     }
-
 
     //Setters
     public void setPerson(Person person) {
@@ -48,10 +44,23 @@ public class Client {
     }
 
     public void setCnh(String cnh) {
+        validateCaracter(cnh, 11);
         this.cnh = cnh;
     }
 
-    public void setTypePerson(String typePerson) {
-        this.typePerson = typePerson;
+
+    public enum PersonType{
+        NATURAL,
+        LEGAL
     }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "person=" + person +
+                ", cnh='" + cnh + '\'' +
+                ", personType=" + personType +
+                '}';
+    }
+
 }
